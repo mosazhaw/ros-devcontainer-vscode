@@ -42,5 +42,10 @@ services:
     - simulator
     depends_on:
     - xserver
+    cap_add:
+    - SYS_NICE
+    ulimits:
+      rtprio: 99
+    privileged: true
 volumes:
   workspace:
